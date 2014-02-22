@@ -1,24 +1,8 @@
-# Vagrant::Secret
-
-TODO: Write a gem description
+# Vagrant-Secret
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'vagrant-secret'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vagrant-secret
-
 ## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
