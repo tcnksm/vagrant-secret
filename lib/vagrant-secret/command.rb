@@ -5,16 +5,16 @@ module VagrantPlugins
     class Command < Vagrant.plugin("2", :command)
 
       def self.synopsis
-        "generates"
+        "generates secret file"
       end
       
       def execute
         secret_file = ::VagrantPlugins::Secret.secret_file
         if secret_file.exist?
-          @env.ui.info("Secret key file (.vagrant/secret.rb) is already exist.")
+          @env.ui.info("[vagrant-secret] Secret key file (.vagrant/secret.rb) is already exist.")
         else
           ::VagrantPlugins::Secret.generate_secret
-          @env.ui.info("Generated secret key file (.vagrant/secret.rb).")
+          @env.ui.info("[vagrant-secret] Generated secret key file (.vagrant/secret.rb).")
         end
       end  
     end          

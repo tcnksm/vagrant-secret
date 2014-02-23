@@ -10,6 +10,7 @@ module VagrantPlugins
     class Plugin < Vagrant.plugin("2")
       name "Secret"
       description <<-DESC
+      Enable secret variable and use it in Vagrantfile
       DESC
 
       command "secret-init" do
