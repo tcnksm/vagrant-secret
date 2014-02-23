@@ -1,7 +1,7 @@
 begin
   require "vagrant"
 rescue LoadError
-  raise "The Vagrant pushover plugin must be run within Vagrant."
+  raise "The Vagrant secret plugin must be run within Vagrant."
 end
 
 module VagrantPlugins
@@ -16,11 +16,7 @@ module VagrantPlugins
         require_relative "command"
         Command
       end
-
-      config(:secret) do
-        require_relative "config"
-        Config
-      end
+      
     end
   end
 end

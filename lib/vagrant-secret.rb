@@ -5,7 +5,7 @@ require "vagrant-secret/plugin"
 module VagrantPlugins
   module Secret
 
-    def self.config_file
+    def self.secret_file
       called_root.join(".vagrant/secret.rb")
     end
 
@@ -13,16 +13,27 @@ module VagrantPlugins
       Pathname.pwd
     end
 
-    def self.write_default_key
+    def self.load_secret
+      begin
+        require VagrantPlugins::Secret.secret_file
+      rescue LoadError
+        STDERR.puts "Secret file is not exist. To enable it run `vagrant secret-init`"
+      end
+    end
+
+    def self.generate_secret
       content = <<-EOF
 module Secret
-  token = ""
+  password = "****"
 end
 EOF
-      File.open(config_file,'w') do |f|
+      File.open(secret_file,'w') do |f|
         f.puts content
       end
     end
 
   end
 end
+
+# Load secret file and enable it.
+VagrantPlugins::Secret.load_secret

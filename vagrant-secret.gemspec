@@ -5,7 +5,7 @@ require 'vagrant-secret/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "vagrant-secret"
-  spec.version       = VagrantPlugin::Secret::VERSION
+  spec.version       = VagrantPlugins::Secret::VERSION
   spec.authors       = ["tcnksm"]
   spec.email         = ["nsd22843@gmail.com"]
   spec.summary       = %q{Write secret-key in Vagrantfile}
