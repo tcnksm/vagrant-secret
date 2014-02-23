@@ -1,5 +1,7 @@
 # Vagrant-Secret
 
+[![Gem Version](https://badge.fury.io/rb/vagrant-secret.png)](http://badge.fury.io/rb/vagrant-secret)
+
 You don't want to write your secret variable like `api_key` or `token` directly in your Vagrantfile.
 
 This plugin enables, 
