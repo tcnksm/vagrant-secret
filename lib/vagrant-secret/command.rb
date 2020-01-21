@@ -11,10 +11,10 @@ module VagrantPlugins
       def execute
         secret_file = ::VagrantPlugins::Secret.secret_file
         if secret_file.exist?
-          @env.ui.info("[vagrant-secret] Secret key file (.vagrant/secret.rb) is already exist.")
+          @env.ui.info("[vagrant-secret] Secret key file (.vagrant/secret.yaml) already exists.")
         else
           ::VagrantPlugins::Secret.generate_secret
-          @env.ui.info("[vagrant-secret] Generated secret key file (.vagrant/secret.rb).")
+          @env.ui.info("[vagrant-secret] Generated secret key file (.vagrant/secret.yaml).")
         end
       end  
     end          
