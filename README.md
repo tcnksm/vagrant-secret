@@ -25,7 +25,7 @@ Generate `secret.yaml`
 $ vagrant secret-init
 ```
 
-Edit your `.vagrant.secret.yaml`
+Edit your `.vagrant/secret.yaml`
 
 ```
 client_id: "*******"
